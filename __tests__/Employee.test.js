@@ -5,9 +5,9 @@ describe("Employee", () => {
         //This should return an object which contains method to get name, id and email. 
         it("should return an object", () => {
             
-            const obj = new Employee()
+            const obj = new Employee();
             // expect(typeof(obj)).toEqual("object");
-            expect("name", "id", "email" in obj).toEqual(true);
+            expect("name" in obj).toEqual(true);
         });
     });
 
