@@ -5,7 +5,7 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div>
+        <div class="manager">
             <div>
                 <h2>${manager.getName()}</h2>
                 <h3>
@@ -32,11 +32,11 @@ const generateTeam = team => {
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div>
+        <div class="engineer">
             <div>
                 <h2>${engineer.getName()}</h2>
                 <h3>
-                    <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
+                    <i class="fas fa-glasses mr-2"></i>  ${engineer.getRole()}
                 </h3>
             </div>
             <div>
@@ -46,7 +46,7 @@ const generateTeam = team => {
                         Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
                     </li>
                     <li>
-                        GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a>
+                        GitHub: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a>
                     </li>
                 </ul>
             </div>
@@ -57,17 +57,19 @@ const generateTeam = team => {
     // create the html for interns
     const generateIntern = intern => {
         return `
-        <div>
+        <div class="intern">
     <div>
         <h2>${intern.getName()}</h2>
         <h3>
-            <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
+            <i class="fas fa-user-graduate mr-2"></i>  ${intern.getRole()}
         </h3>
     </div>
     <div>
         <ul>
             <li>ID: ${intern.getId()}</li>
-            <li>${intern.getEmail()}</a></li>
+            <li>
+                Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
+            </li>
             <li>School: ${intern.getSchool()}</li>
         </ul>
     </div>
@@ -98,7 +100,7 @@ const generateTeam = team => {
 
 // export function to generate entire page
 module.exports = team => {
-console.log(team);
+    console.log(team);
     return `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -107,6 +109,8 @@ console.log(team);
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>My Team</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     </head>
     <body>

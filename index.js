@@ -29,16 +29,16 @@ inquirer.prompt([
     {
         type: 'input',
         message: "Please enter your team member's office number.",
-        name: 'officeNumber'
-    }
+        name: 'officeNumber',
+    },
    ]).then(response => {
-        const teamManager = new Manager(response.name, response.id, response.email);
-        console.log(response);
+        const teamManager = new Manager(response.name, response.id, response.email, response.officeNumber);
+        // console.log(response);
         newTeam.push(teamManager);
-        addTeamMemeber();
+        addTeamMember();
     })
 
-function addTeamMemeber() {
+function addTeamMember() {
     inquirer.prompt([
 
         {//Engineer
@@ -87,11 +87,12 @@ function addEngineer() {
             type: 'input',
             message: "Please enter your team member's GitHub username.",
             name: 'github',
+            default: 'https://github.com',
         }]).then(response => {
             const teamEngineer = new Engineer(response.name, response.id, response.email, response.github);
             newTeam.push(teamEngineer);
-            addTeamMemeber();
-        })
+            addTeamMember();
+        });
 }
 function addIntern() {
     inquirer.prompt([
@@ -114,13 +115,13 @@ function addIntern() {
         {
             type: 'input',
             message: "Please enter your team member's school.",
-            name: 'github',
+            name: 'school',
         },
     ]).then(response => {
         const teamIntern = new Intern(response.name, response.id, response.email, response.school);
         newTeam.push(teamIntern);
-        addTeamMemeber();
-    })
+        addTeamMember();
+    });
 }
 
 function exitApp(){
