@@ -4,116 +4,120 @@ const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const team = require('./src/page-template');
+//const { exit } = require('process');
 
 // TODO: CODE GOES HERE
 // const init = () => { }
-inquirer.prompt ([ 
+inquirer.prompt([
     { //Manager
         type: 'input',
-        message: "Please enter your team member's name.",
+        message: "Please enter your team manager's name.",
         name: 'name',
     },
     {
         type: 'input',
-        message: "Please enter your team member's employee ID.",
+        message: "Please enter your team manager's employee ID.",
         name: 'id',
     },
     {
         type: 'input',
-        message: "Please enter your team member's email.",
+        message: "Please enter your team manager's email.",
         name: 'email',
     },
     {
         type: 'input',
         message: "Please enter your team member's office number.",
-        name: 'officeNumber',
-    },
-    {//Engineer
-        type: 'list',
-        message: "Would you like to add another team memeber?",
-        name: 'role',
-        choice: [
-            'Engineer',
-            'Intern',
-            'None',
-        ],
-    },
-    {
-        type: 'input',
-        message: "Please enter your team member's name.",
-        name: 'name',
-    }, 
-    {
-        type: 'input',
-        message: "Please enter your team member's ID.",
-        name: 'id',
-    },
-    {
-        type: 'input',
-        message: "Please enter your team member's email.",
-        name: 'email',
-    },
-    {
-        type: 'input',
-        message: "Please enter your team member's GitHub username.",
-        name: 'github',
-    },
-    { //Intern
-        type: 'input',
-        message: "Would you like to add another team member?",
-        name: 'role',
-        choices: [
-            'Engineer',
-            'Intern',
-            'None',
-        ]
-    },
-    {
-        type: 'input',
-        message: "Please enter your team member's name.",
-        name: 'name',
-    }, 
-    {
-        type: 'input',
-        message: "Please enter your team member's ID.",
-        name: 'id',
-    },
-    {
-        type: 'input',
-        message: "Please enter your team member's email.",
-        name: 'email',
-    },
-    {
-        type: 'input',
-        message: "Please enter your team member's school.",
-        name: 'github',
-    },
-])
-// .then((answers) => {
-//     console.log(answers);
-//     module.exports = team => {
-//         return `<!DOCTYPE html>
-//         <html lang="en">
-//             <head>
-//                 <meta charset="UTF-8" />
-//                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//                 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-//                 <title>My Team</title>
-//                 <link rel="stylesheet" href="style.css">
-//                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-//             </head>
-//             <body>
-//                 <header>
-//                     <h1>My Team</h1>
-//                 </header>
-//                 <main>
-//                     ${generateTeam(team)}
-//                 </main>
-//             </body>
-//         </html>
-//             `;
-        
-//         };
-        
-//     }); 
-// console.log(team);
+        name: 'officeNumber'
+    }
+   ]).then(response => {
+        const teamManager = new Manager(response.name, response.id, response.email);
+        console.log(response);
+        addTeamMemeber();
+    })
+
+function addTeamMemeber() {
+    inquirer.prompt([
+
+        {//Engineer
+            type: 'list',
+            message: "Would you like to add another team memeber?",
+            name: 'role',
+            choices: [
+                'Engineer',
+                'Intern',
+                'None',
+            ],
+        }]).then(response => {
+            switch (response.role) {
+                case 'Engineer':
+                    addEngineer()
+                    break;
+                case 'Intern':
+                    addIntern()
+                    break;
+                case 'None':
+                    exitApp();
+            }
+        })
+}
+
+function addEngineer() {
+
+    inquirer.prompt([
+
+        {
+            type: 'input',
+            message: "Please enter your team member's name.",
+            name: 'name',
+        },
+        {
+            type: 'input',
+            message: "Please enter your team member's ID.",
+            name: 'id',
+        },
+        {
+            type: 'input',
+            message: "Please enter your team member's email.",
+            name: 'email',
+        },
+        {
+            type: 'input',
+            message: "Please enter your team member's GitHub username.",
+            name: 'github',
+        }]).then(response => {
+            const teamEngineer = new Engineer(response.name, response.id, response.email, response.github);
+            addTeamMemeber();
+        })
+}
+function addIntern() {
+    inquirer.prompt([
+
+        {
+            type: 'input',
+            message: "Please enter your team member's name.",
+            name: 'name',
+        },
+        {
+            type: 'input',
+            message: "Please enter your team member's ID.",
+            name: 'id',
+        },
+        {
+            type: 'input',
+            message: "Please enter your team member's email.",
+            name: 'email',
+        },
+        {
+            type: 'input',
+            message: "Please enter your team member's school.",
+            name: 'github',
+        },
+    ]).then(response => {
+        const teamIntern = new Intern(response.name, response.id, response.email, response.school);
+        addTeamMemeber();
+    })
+}
+
+function exitApp(){
+
+}
