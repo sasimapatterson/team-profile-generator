@@ -27,7 +27,7 @@ h1 {
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
     color: #256D85;
-    
+
 }
 
 h2 {
@@ -41,7 +41,6 @@ h3 {
     margin-top: 12px;
     margin-left: 5px;
     font-size: 1.7rem;
-    /* background: lightblue; */
 }
 
 ul {
@@ -50,16 +49,10 @@ ul {
     margin-top: 17px;
     padding: 0;
     margin-left: 5px;
-
-    /* background: gray; */
-
 }
 
 li {
     font-size: 1.38rem;
-    /* margin-left: 0; */
-    /* text-align: left; */
-
 }
 
 .manager,
@@ -98,18 +91,16 @@ li {
     }
 
     header {
-        margin-top: 0px;
-
+        /* margin-top: 0px; */
         height: 130px;
-
-        text-align: center;
+        /* text-align: center; */
     }
 
     h1 {
         padding-top: 20px;
-        font-size: 4rem;
+        /* font-size: 4rem; */
         font-weight: bolder;
-        font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
         background: #7aa8be;
         padding-bottom: 13px;
         color: #231955;
@@ -120,17 +111,17 @@ li {
     }
 
     ul {
-        list-style: none;
+        /* list-style: none; */
         line-height: 32px;
-        margin-top: 17px;
-        padding: 0;
+        /* margin-top: 17px;
+        padding: 0; */
         margin-left: 15px;
     }
 
     h3 {
-        margin-top: 12px;
+        /* margin-top: 12px; */
         margin-left: 15px;
-        font-size: 1.7rem;
+        /* font-size: 1.7rem; */
     }
 
 }
@@ -138,6 +129,7 @@ li {
 /* ------------- For Screen between 768px upto 991px*/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
+    /* --- changed to different set of colour */
     main {
         display: flex;
         background: rgb(34, 193, 195);
@@ -157,9 +149,9 @@ li {
 
     h1 {
         padding-top: 10px;
-        font-size: 4rem;
+        /* font-size: 4rem; */
         font-weight: bolder;
-        font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
         background: #7aa8be;
         padding-bottom: 15px;
     }
@@ -167,7 +159,7 @@ li {
     h2 {
         border-color: #4C0033;
     }
-    
+
 
 }
 

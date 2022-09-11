@@ -5,11 +5,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const team = require('./src/page-template');
 
+//  an empty array to collect each set of answers from different groups of employee.
 const newTeam = [];
-//const { exit } = require('process');
 
-// TODO: CODE GOES HERE
-// const init = () => { }
+// Create prompts to collect user inputs
 inquirer.prompt([
     { //Manager
         type: 'input',
@@ -31,17 +30,17 @@ inquirer.prompt([
         message: "Please enter your team member's office number.",
         name: 'officeNumber',
     },
-   ]).then(response => {
-        const teamManager = new Manager(response.name, response.id, response.email, response.officeNumber);
-        // console.log(response);
-        newTeam.push(teamManager);
-        addTeamMember();
-    })
+]).then(response => { //got the above answers for manager then add to the newTeam array by using .push method.
+    const teamManager = new Manager(response.name, response.id, response.email, response.officeNumber);
+    newTeam.push(teamManager);
+    addTeamMember();
+})
 
+// to add team member using switch case. If the user choose to add Engineer then the addEngineer() will be called. If the user choose to add Intern then the addIntern() will be called.
 function addTeamMember() {
     inquirer.prompt([
 
-        {//Engineer
+        {
             type: 'list',
             message: "Would you like to add another team memeber?",
             name: 'role',
@@ -64,6 +63,7 @@ function addTeamMember() {
         })
 }
 
+// Engineer
 function addEngineer() {
 
     inquirer.prompt([
@@ -94,7 +94,10 @@ function addEngineer() {
             addTeamMember();
         });
 }
+
+// Intern 
 function addIntern() {
+
     inquirer.prompt([
 
         {
@@ -124,6 +127,7 @@ function addIntern() {
     });
 }
 
-function exitApp(){
+//to exit the app and generate the team.html file which will display all the input that collected from the user's answers above.
+function exitApp() {
     fs.writeFileSync('dist/team.html', team(newTeam));
 }

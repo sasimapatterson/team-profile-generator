@@ -2,7 +2,7 @@ const Employee = require("../lib/Employee");
 
 describe("Employee", () => {
     describe("Initialization", () => {
-        //This should return an object which contains method to get name, id and email. 
+        //This should retrun true if there is 'name' inside the object . 
         it("should return an object", () => {
             
             const obj = new Employee();
@@ -12,7 +12,7 @@ describe("Employee", () => {
     });
 
     describe ("name", () => {
-        //this will return the name from the getName() which is created inside Employee.js
+        //this should return the same name value as indicate inside new Emplyee("").
         it("should create new name", () => {
 
             const obj = new Employee("Rachel");
@@ -21,7 +21,7 @@ describe("Employee", () => {
     });
 
     describe ("Id", () => {
-        //this will return id from the getId() which is created inside Employee.js
+        //this should return the same id value as indicate inside new Employee();
         it("should create new id", () => {
 
             const obj = new Employee("Rachel", 123);
@@ -30,7 +30,7 @@ describe("Employee", () => {
     });
 
     describe ("email", () => {
-        //this will return e-mail from the getEmail() which is created inside Employee.js
+        //this should return the same e-mail value as indicate inside new Employee();
         it("should create new id", () => {
 
             const obj = new Employee("Rachel", 123, "rachel@friends.com");
