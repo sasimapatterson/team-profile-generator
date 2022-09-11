@@ -6,26 +6,35 @@
 
 body {
     font-family: 'Poppins', san-serif;
+    background: #fdbb2d;
+}
+
+main {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(197, 148, 239, 1) 87%, rgba(253, 187, 45, 1) 100%, rgba(14, 2, 24, 1) 100%);
+    height: 100vh;
 }
 
 header {
-    margin-top: 10px;
-    height: 100px;
-    /* background: lightgreen; */
+    margin-top: 0px;
+    height: 120px;
+    background: #fdbb2d;
     text-align: center;
 }
 
 h1 {
-    padding-top: 20px;
-    font-size: 72px;
+    padding-top: 10px;
+    font-size: 4rem;
     font-family: 'Poppins', sans-serif;
+    color: #256D85;
+    
 }
 
 h2 {
     text-align: center;
     font-size: 2.2rem;
     padding-top: 7px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #256D85;
 }
 
 h3 {
@@ -60,7 +69,7 @@ li {
     margin-top: 30px;
     height: 225px;
     width: 350px;
-    border: 2px solid black;
+    border: 2px solid #256D85;
 
 }
 
@@ -72,7 +81,7 @@ li {
 
     main {
         display: flex;
-        
+
         background: rgb(34, 193, 195);
         background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(122, 168, 190, 1) 44%, rgba(253, 187, 45, 1) 100%);
         height: 100vh;
@@ -92,7 +101,7 @@ li {
         margin-top: 0px;
 
         height: 130px;
-        
+
         text-align: center;
     }
 
@@ -103,6 +112,11 @@ li {
         font-family: 'Poppins', sans-serif;
         background: #7aa8be;
         padding-bottom: 13px;
+        color: #231955;
+    }
+
+    h2 {
+        border-color: #4C0033;
     }
 
     ul {
@@ -126,6 +140,9 @@ li {
 
     main {
         display: flex;
+        background: rgb(34, 193, 195);
+        background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(122, 168, 190, 1) 44%, rgba(253, 187, 45, 1) 100%);
+        height: 100vh;
     }
 
     .manager,
@@ -135,13 +152,27 @@ li {
         margin-top: 30px;
         height: 225px;
         width: 450px;
-        border-color: aqua;
+        border-color: #4C0033;
     }
+
+    h1 {
+        padding-top: 10px;
+        font-size: 4rem;
+        font-weight: bolder;
+        font-family: 'Poppins', sans-serif;
+        background: #7aa8be;
+        padding-bottom: 15px;
+    }
+
+    h2 {
+        border-color: #4C0033;
+    }
+    
 
 }
 
 /* ------------- For Screen between 992px upto 1200px*/
-@media screen and (min-width: 768px) and (max-width: 991px) {
+/* @media screen and (min-width: 768px) and (max-width: 991px) {
 
     .manager,
     .engineer,
@@ -150,7 +181,18 @@ li {
         margin-top: 30px;
         height: 225px;
         width: 450px;
-        border-color: aqua;
+        border-color: #256D85;
     }
 
-}
+    h1 {
+       
+        color: #256D85;
+        
+    }
+
+    h2 {
+        
+        border-bottom: 2px solid #256D85;
+    }
+
+} */
