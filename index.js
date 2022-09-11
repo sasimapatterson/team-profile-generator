@@ -4,6 +4,8 @@ const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const team = require('./src/page-template');
+
+const newTeam = [];
 //const { exit } = require('process');
 
 // TODO: CODE GOES HERE
@@ -32,6 +34,7 @@ inquirer.prompt([
    ]).then(response => {
         const teamManager = new Manager(response.name, response.id, response.email);
         console.log(response);
+        newTeam.push(teamManager);
         addTeamMemeber();
     })
 
@@ -86,6 +89,7 @@ function addEngineer() {
             name: 'github',
         }]).then(response => {
             const teamEngineer = new Engineer(response.name, response.id, response.email, response.github);
+            newTeam.push(teamEngineer);
             addTeamMemeber();
         })
 }
@@ -114,10 +118,11 @@ function addIntern() {
         },
     ]).then(response => {
         const teamIntern = new Intern(response.name, response.id, response.email, response.school);
+        newTeam.push(teamIntern);
         addTeamMemeber();
     })
 }
 
 function exitApp(){
-
+    fs.writeFileSync('dist/team.html', team(newTeam));
 }
