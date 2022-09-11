@@ -13,77 +13,77 @@
 </head>
 
 <body>
-    <header class="container-fluid bg-light mt-5 pt-5 pb-4">
-        <div class="">
-            <h1 class="fs-1 text-center">My Team</h1>
+    <header>
+        <div>
+            <h1>My Team</h1>
         </div>
 
     </header>
     <main>
         <!-- TEAM DATA GOES HERE -->
         <!-- Manager -->
-        <div class="container d-flex">
-            <div class="manager row align-item-start text-center ">
-                <div class="col-4">
-                    <h2>${manager.getName()}</h2>
-                    <h3>
-                        <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
-                    </h3>
-                </div>
 
-                <div>
-                    <ul>
-                        <li>
-                            ID: ${manager.getId()}
-                        </li>
-                        <li>
-                            Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
-                        </li>
-                        <li>
-                            Office number: ${manager.getOfficeNumber()}
-                        </li>
-                    </ul>
-                </div>
+        <div class="manager">
+            <div>
+                <h2>${manager.getName()}</h2>
+                <h3>
+                    <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
+                </h3>
             </div>
 
-            <!-- Engineer -->
-            <div class="engineer row align-item-center text-center">
-                <div class="col-4">
-                    <h2>${engineer.getName()}</h2>
-                    <h3>
-                        <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
-                    </h3>
-                </div>
-                <div>
-                    <ul>
-                        <li>ID: ${engineer.getId()}</li>
-                        <li>
-                            Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
-                        </li>
-                        <li>
-                            GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank"
-                                rel="noopener noreferrer">${engineer.getGithub()}</a>
-                        </li>
-                    </ul>
-                </div>
+            <div>
+                <ul>
+                    <li>
+                        ID: ${manager.getId()}
+                    </li>
+                    <li>
+                        Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
+                    </li>
+                    <li>
+                        Office number: ${manager.getOfficeNumber()}
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <!-- Intern  -->
-            <div class="intern row align-item-end text-center">
-                <div class="col-4">
-                    <h2>${intern.getName()}</h2>
-                    <h3>
-                        <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
-                    </h3>
-                </div>
-                <div>
-                    <ul>
-                        <li>ID: ${intern.getId()}</li>
-                        <li>${intern.getEmail()}</a></li>
-                        <li>School: ${intern.getSchool()}</li>
-                    </ul>
-                </div>
+        <!-- Engineer -->
+        <div class="engineer">
+            <div>
+                <h2>${engineer.getName()}</h2>
+                <h3>
+                    <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
+                </h3>
             </div>
+            <div>
+                <ul>
+                    <li>ID: ${engineer.getId()}</li>
+                    <li>
+                        Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
+                    </li>
+                    <li>
+                        GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank"
+                            rel="noopener noreferrer">${engineer.getGithub()}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Intern  -->
+        <div class="intern">
+            <div>
+                <h2>${intern.getName()}</h2>
+                <h3>
+                    <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
+                </h3>
+            </div>
+            <div>
+                <ul>
+                    <li>ID: ${intern.getId()}</li>
+                    <li>${intern.getEmail()}</a></li>
+                    <li>School: ${intern.getSchool()}</li>
+                </ul>
+            </div>
+        </div>
         </div>
     </main>
 </body>
