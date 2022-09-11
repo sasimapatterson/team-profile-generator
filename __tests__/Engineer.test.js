@@ -2,6 +2,7 @@ const Engineer = require("../lib/Engineer");
 
 describe("Engineer", () => {
     describe("Initialization", () => {
+        //Set to check if there is 'github' property inside the object.
         it("should return an object", () => {
 
             const obj = new Engineer();
