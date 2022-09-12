@@ -10,7 +10,7 @@ const newTeam = [];
 
 // Create prompts to collect user inputs
 inquirer.prompt([
-    { //Manager
+    { //Manager (collecting data for manager's role).
         type: 'input',
         message: "Please enter your team manager's name.",
         name: 'name',
@@ -63,7 +63,7 @@ function addTeamMember() {
         })
 }
 
-// Engineer
+// Engineer (collecting data for engineer's role).
 function addEngineer() {
 
     inquirer.prompt([
@@ -95,7 +95,7 @@ function addEngineer() {
         });
 }
 
-// Intern 
+// Intern (collecting data for intern's role).
 function addIntern() {
 
     inquirer.prompt([

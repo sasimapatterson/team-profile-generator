@@ -9,6 +9,7 @@ body {
     background: #fdbb2d;
 }
 
+/* Gives gradient colours */
 main {
     background: rgb(34, 193, 195);
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(197, 148, 239, 1) 87%, rgba(253, 187, 45, 1) 100%, rgba(14, 2, 24, 1) 100%);
@@ -27,7 +28,6 @@ h1 {
     font-size: 4rem;
     font-family: 'Poppins', sans-serif;
     color: #256D85;
-
 }
 
 h2 {
@@ -63,7 +63,6 @@ li {
     height: 225px;
     width: 350px;
     border: 2px solid #256D85;
-
 }
 
 /* ------------------ Media Queries------------------- */
@@ -91,16 +90,12 @@ li {
     }
 
     header {
-        /* margin-top: 0px; */
         height: 130px;
-        /* text-align: center; */
     }
 
     h1 {
         padding-top: 20px;
-        /* font-size: 4rem; */
         font-weight: bolder;
-        /* font-family: 'Poppins', sans-serif; */
         background: #7aa8be;
         padding-bottom: 13px;
         color: #231955;
@@ -111,25 +106,19 @@ li {
     }
 
     ul {
-        /* list-style: none; */
         line-height: 32px;
-        /* margin-top: 17px;
-        padding: 0; */
         margin-left: 15px;
     }
 
     h3 {
-        /* margin-top: 12px; */
         margin-left: 15px;
-        /* font-size: 1.7rem; */
     }
-
 }
 
 /* ------------- For Screen between 768px upto 991px*/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
-    /* --- changed to different set of colour */
+    /* --- changed to different set of colours */
     main {
         display: flex;
         background: rgb(34, 193, 195);
@@ -149,9 +138,7 @@ li {
 
     h1 {
         padding-top: 10px;
-        /* font-size: 4rem; */
         font-weight: bolder;
-        /* font-family: 'Poppins', sans-serif; */
         background: #7aa8be;
         padding-bottom: 15px;
     }
@@ -159,32 +146,5 @@ li {
     h2 {
         border-color: #4C0033;
     }
-
-
 }
 
-/* ------------- For Screen between 992px upto 1200px*/
-/* @media screen and (min-width: 768px) and (max-width: 991px) {
-
-    .manager,
-    .engineer,
-    .intern {
-        margin: auto;
-        margin-top: 30px;
-        height: 225px;
-        width: 450px;
-        border-color: #256D85;
-    }
-
-    h1 {
-       
-        color: #256D85;
-        
-    }
-
-    h2 {
-        
-        border-bottom: 2px solid #256D85;
-    }
-
-} */
