@@ -1,4 +1,5 @@
 # Team Profile Generator
+Collects data relates to the employee's role. Each team member's information will be displayed in a nicely formatted webpage with an easy access to the required info.
 
 ## Table of Contents
 1. [Descriptions](#descriptions) 
