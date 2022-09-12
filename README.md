@@ -13,7 +13,7 @@ This app allows the user to create the list of the team members with the essenti
 
 
 ## Testing
-It is important to make sure the app will run effectively. Jest is used to perform testing for this team generator app. Developer will write the test based on functionality of the app, run the test until all the tests are passed.
+It is important to make sure the app will run effectively. Jest is used to perform testing for this team generator app and Inquirer to collect the input from user. Developer will write the test based on functionality of the app, run the test until all the tests have passed.
 
 To run the test use the following command.
 
@@ -41,7 +41,7 @@ The app will generate 'My Team' webpage displaying all the information collectin
 
 ![My Team Mobile](./images/team-generator-mobile.png)
 
-The user will be able to have a quick and easy access to the basic information of each employees in the team.
+The user will be able to have a quick and easy access to the basic information of each team members.
 
 ![My Team Desktop with email](./images/team-generator-email.png)
 
@@ -52,6 +52,8 @@ My instructor Mr.Anthony Cooper.
 You can click the following link for the walkthrough video of this Team Generator App.
 
 [Walkthrough Video](https://drive.google.com/file/d/1cSjoy_nZcGN2dZtG6MKCTGHXvPEylzor/view?usp=sharing)
+
+
 
 
 
