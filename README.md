@@ -37,11 +37,11 @@ User can add team members for different roles until satisfies with the team by s
 
 ![Prompt to add team member](./images/team-generator-list.png)
 
-The app will generate 'My Team' webpage displaying the all the information collecting from the user's input.
+The app will generate 'My Team' webpage displaying all the information collecting from the user's input.
 
 ![My Team Mobile](./images/team-generator-mobile.png)
 
-The user will then have a quick and easy access to the basic information of each employees in the team.
+The user will be able to have a quick and easy access to the basic information of each employees in the team.
 
 ![My Team Desktop with email](./images/team-generator-email.png)
 
